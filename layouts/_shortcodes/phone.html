@@ -1,0 +1,3 @@
+{{- $phone := site.Params.contact.phone -}}
+{{- with .Page.Params.phone -}}{{- $phone = . -}}{{- end -}}
+{{- partial "phone-link" $phone -}}

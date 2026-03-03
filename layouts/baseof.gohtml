@@ -6,7 +6,7 @@
     {{ partial "favicon" . }}
     <title>{{ site.Title }}</title>
     {{ partial "css" . }}
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="{{ site.Params.alpineJSURL }}" defer></script>
   </head>
   <body>
     <header>

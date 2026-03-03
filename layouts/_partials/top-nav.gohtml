@@ -2,7 +2,7 @@
 <nav>
   <ul>
     <li>
-      <a href="{{ site.BaseURL }}" class="logo">
+      <a href="{{ "/" | relURL }}" class="logo">
         {{ with resources.Get "logo_1.png" }}
           <img
             src="{{ .Permalink }}"
@@ -17,22 +17,23 @@
     {{ with site.Menus.main }}
       {{ range . }}
         {{ $url := .URL }}
-        {{ if eq .Name "Services" }}
-          {{ $url = printf "%s#%s" $url "services" }}
+        {{ with .Params.sectionId }}
+          {{ $url = printf "%s#%s" $url . }}
         {{ end }}
         <li>
-          <a
-            href="{{ $url }}"
-            class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}"
-            >{{ .Name }}</a
-          >
+          {{ if .Params.button }}
+            <a href="{{ $url }}">
+              <button>{{ .Name }}</button>
+            </a>
+          {{ else }}
+            <a
+              href="{{ $url }}"
+              class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}"
+              >{{ .Name }}</a
+            >
+          {{ end }}
         </li>
       {{ end }}
     {{ end }}
-    <li>
-      <a href="/contact">
-        <button>Contact</button>
-      </a>
-    </li>
   </ul>
 </nav>
