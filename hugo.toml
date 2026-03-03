@@ -21,6 +21,13 @@ weight = 10
 [menus.main.params]
 sectionId = "services"
 
+[[menus.main]]
+name = "Contact"
+pageRef = "/contact"
+weight = 40
+[menus.main.params]
+button = true
+
 [outputformats]
 [outputformats.gohtml]
 mediaType = "text/html"
@@ -28,6 +35,7 @@ baseName = "index"
 isHTML = true
 
 [params]
+alpineJSURL = "//unpkg.com/alpinejs"
 [params.contact]
 email = "jackson@goldengatesoftwaresolutions.com"
 phone = "+14157613680"

@@ -6,6 +6,6 @@
     </hgroup>
   </header>
   <figure>
-  <img alt="{{ .image.alt }}" src="{{ .image.src }}"/>
+  <img alt="{{ .image.alt }}" src="{{ .image.src | relURL }}"/>
 </figure>
 </article>

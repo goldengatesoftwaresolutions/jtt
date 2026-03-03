@@ -7,7 +7,7 @@ title = 'Contact 👋🏻'
 📍 San Francisco, CA
 
 ## Phone
-📞 [(415) 761-3680](tel:14157613680)
+📞 {{< phone >}}
 
 ## Email
-✉️ [jackson@goldengatesoftwaresolutions.com](mailto:jackson@goldengatesoftwaresolutions.com)
+✉️ {{< email >}}
