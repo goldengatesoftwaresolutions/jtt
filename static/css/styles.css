@@ -43,20 +43,76 @@ body {
     display: block;
   }
   > footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem 0;
-    background: linear-gradient(#fff, #5dd9fb, #036ee0);
+    padding: 2.5rem 1.5rem 2rem;
+    background: linear-gradient(160deg, #0d3a5e 0%, #09528a 55%, #0a6bb4 100%);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    > * {
-      margin: auto;
-    }
+    color: #f4faff;
     a {
       text-decoration: none;
+      color: #e9f6ff;
+      &:hover {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    }
+    h3 {
+      margin: 0 0 0.9rem;
+      color: #ffffff;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+    }
+    .footer-grid {
+      display: grid;
+      gap: 1.75rem;
+      max-width: 1100px;
+      margin: 0 auto;
+      grid-template-areas:
+        "contact"
+        "sitemap"
+        "copyright";
+      @media screen and (width > 768px) {
+        grid-template-columns: minmax(320px, 1.3fr) minmax(220px, 1fr);
+        grid-template-areas:
+          "contact sitemap"
+          "copyright copyright";
+        align-items: start;
+      }
+    }
+    .footer-contact {
+      grid-area: contact;
+      justify-self: start;
+    }
+    .footer-sitemap {
+      grid-area: sitemap;
+      justify-self: start;
+      @media screen and (width > 768px) {
+        justify-self: end;
+        text-align: left;
+      }
+      ul {
+        display: grid;
+        gap: 0.4rem;
+      }
+    }
+    .footer-copyright {
+      grid-area: copyright;
+      text-align: center;
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.28);
+      color: #d9ecff;
+      font-size: 0.95rem;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      line-height: 1.5;
+      & + .footer-contact-item {
+        margin-top: 0.45rem;
+      }
     }
   }
 }
@@ -112,11 +168,11 @@ body > header > nav {
 .content-grid {
   display: grid;
   grid-template-columns:
-    [full-width-start] 2rem
+    [full-width-start] 0.5rem
     [expand-start] 1fr
     [content-start] 4fr
     [content-end] 1fr
-    [expand-end] 2rem
+    [expand-end] 0.5rem
     [full-width-end];
   > * {
     grid-column: content-start / content-end;
