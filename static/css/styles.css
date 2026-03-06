@@ -43,20 +43,45 @@ body {
     display: block;
   }
   > footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2rem 0;
+    padding: 2rem;
     background: linear-gradient(#fff, #5dd9fb, #036ee0);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    > * {
-      margin: auto;
-    }
     a {
       text-decoration: none;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    .footer-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-areas:
+        "contact"
+        "sitemap"
+        "copyright";
+      @media screen and (width > 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "contact sitemap"
+          "copyright copyright";
+      }
+    }
+    .footer-contact {
+      grid-area: contact;
+    }
+    .footer-sitemap {
+      grid-area: sitemap;
+    }
+    .footer-copyright {
+      grid-area: copyright;
+      text-align: center;
+    }
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
   }
 }

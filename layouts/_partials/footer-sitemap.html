@@ -1,0 +1,10 @@
+<nav aria-label="Sitemap">
+  <ul>
+    <li><a href="/">Home</a></li>
+    {{ range site.Menus.main }}
+    <li>
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>

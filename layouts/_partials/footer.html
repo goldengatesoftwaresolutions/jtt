@@ -1,5 +1,11 @@
-📞 {{ partial "phone-link" site.Params.contact.phone }}
-<a href="mailto:{{ site.Params.contact.email }}"
-  >{{ site.Params.contact.email }}</a
->
-<div id="copyright">©️ 2026</div>
+<div class="footer-grid">
+  <section class="footer-contact">
+    <h3>Contact</h3>
+    {{ partial "footer-phone" . }} {{ partial "footer-email" . }}
+  </section>
+  <section class="footer-sitemap">
+    <h3>Site Map</h3>
+    {{ partial "footer-sitemap" . }}
+  </section>
+  <div class="footer-copyright">{{ partial "footer-copyright" . }}</div>
+</div>
