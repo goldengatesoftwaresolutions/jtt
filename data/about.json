@@ -1,0 +1,10 @@
+{
+  "hero": {
+    "heading": "Meet Jackson the Tech Guy",
+    "subheading": "10+ years of IT expertise, brought directly to your door.",
+    "image": {
+      "src": "/images/comic-book-cover.png",
+      "alt": "a comic-book cover of a heroic technician doing battle with a malevolent and beige computer"
+    }
+  }
+}
