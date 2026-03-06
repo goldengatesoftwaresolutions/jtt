@@ -168,11 +168,11 @@ body > header > nav {
 .content-grid {
   display: grid;
   grid-template-columns:
-    [full-width-start] 2rem
+    [full-width-start] 0.5rem
     [expand-start] 1fr
     [content-start] 4fr
     [content-end] 1fr
-    [expand-end] 2rem
+    [expand-end] 0.5rem
     [full-width-end];
   > * {
     grid-column: content-start / content-end;
