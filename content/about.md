@@ -5,8 +5,6 @@ layout = 'about'
 email = 'hello@goldengatesoftwaresolutions.com'
 +++
 
-## Our Story
-
 Jackson Galan, the founder and lead technician behind Jackson the Tech Guy, brings over 10 years of hands-on IT and software development experience to every job. His career has taken him through the fast-paced world of San Francisco startups, national corporations like Amazon Web Services (AWS), and even the inner workings of city government — all while maintaining a passion for home and home office service. That breadth of experience means no problem is too complex, too niche, or too simple.
 
 In 2023, Jackson recognized a growing need for reliable, affordable computer services in his local community. What began with troubleshooting neighbors' laptops, untangling home networks, and getting printers back online quickly grew into something bigger. He expanded his work to serve local startups and small businesses, providing IT support, office management, and infrastructure solutions that once seemed out of reach for organizations without a dedicated tech team.

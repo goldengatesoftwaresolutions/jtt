@@ -1,12 +1,8 @@
 {{ define "main" }}
-<section class="content-grid section">
-  <header>
-    <hgroup>
-      <h1>{{ .Title }}</h1>
-      <p>{{ .Content }}</p>
-    </hgroup>
-  </header>
+<section class="content-grid blog-list">
   <main>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}<div class="blog-description">{{ . }}</div>{{ end }}
     <ul>
       {{ range .RegularPages }}
       <li>
