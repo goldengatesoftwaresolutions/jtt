@@ -36,6 +36,7 @@ isHTML = true
 
 [params]
 alpineJSURL = "//unpkg.com/alpinejs"
+description = "Local Superhero Tackles IT Issues, Making it Look Easy"
 [params.contact]
 email = "jackson@goldengatesoftwaresolutions.com"
 phone = "+14157613680"
